@@ -1,0 +1,18 @@
+[book]
+authors = ["StanlsSlav"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Blog"
+
+[output.html]
+preferred-dark-theme = "ayu"
+smart-punctuation = true
+
+[output.html.playground]
+editable = true
+
+[output.html.print]
+enable = false
+
+[preprocessor.alerts]
