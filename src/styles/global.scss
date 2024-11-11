@@ -1,0 +1,50 @@
+$background-color: #121212;
+$color: #00c896;
+
+$light-background-color: $color;
+$light-color: $background-color;
+
+@mixin theme-colors($dark-mode: true) {
+  transition: all 250ms ease-in-out;
+
+  @if $dark-mode {
+    background-color: $background-color;
+    color: $color;
+  } @else {
+    background-color: $light-background-color;
+    color: $light-color;
+  }
+}
+
+html {
+  @include theme-colors($dark-mode: true);
+
+  &.light {
+    @include theme-colors($dark-mode: false);
+  }
+
+  &,
+  body {
+    margin: 0;
+    height: 100%;
+    max-height: 100%;
+  }
+}
+
+body {
+  display: inline-flex;
+  align-items: center;
+
+  &,
+  main {
+    width: 100%;
+  }
+}
+
+main {
+  height: fit-content;
+}
+
+svg[height="0"] {
+  position: fixed;
+}

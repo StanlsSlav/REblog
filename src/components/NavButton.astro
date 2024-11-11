@@ -1,0 +1,36 @@
+---
+import Linkable from "./Linkable.astro";
+
+const { href } = Astro.props;
+---
+
+<Linkable {href}>
+  <button>
+    <slot />
+  </button>
+</Linkable>
+
+<style lang="scss">
+  button {
+    border: 0;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 8px;
+
+
+    --border-color: green;
+    --border-width: 5px;
+    --bottom-distance: 0px;
+
+    background-image: linear-gradient(var(--border-color), var(--border-color));
+    background-size: 0% var(--border-width);
+    background-repeat: no-repeat;
+    background-position: 0 calc(100% - var(--bottom-distance));
+    transition: background-size 250ms ease-in-out;
+  }
+
+  button:hover {
+    background-size: 100% var(--border-width);
+  }
+</style>

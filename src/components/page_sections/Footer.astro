@@ -1,0 +1,31 @@
+---
+import Linkable from "../Linkable.astro";
+---
+
+<footer>
+  <Linkable href="https://github.com/StanlsSlav" target="_blank">
+    <ion-icon name="logo-github"></ion-icon>
+  </Linkable>
+  <Linkable href="mailto://StanlsSlav@proton.me">
+    <ion-icon name="mail-outline"></ion-icon>
+  </Linkable>
+</footer>
+
+<style lang="scss">
+  footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 0.85rem;
+    width: fit-content;
+    padding: 1% 10%;
+    border-radius: 8px;
+    box-shadow:
+      0 0 7px floralwhite,
+      0 0 3px floralwhite inset;
+  }
+
+  ion-icon {
+    font-size: 32px;
+  }
+</style>

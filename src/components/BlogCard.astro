@@ -1,0 +1,18 @@
+---
+import FormattedDate from "./FormattedDate.astro";
+import Linkable from "./Linkable.astro";
+
+let { post } = Astro.props;
+---
+
+<Linkable href={"/blog/" + post.slug}>
+  <div>
+    <span>{post.data.title}</span>
+
+    <p>
+      <FormattedDate date={post.data.creationDate} />
+    </p>
+  </div>
+</Linkable>
+
+<style lang="scss"></style>
